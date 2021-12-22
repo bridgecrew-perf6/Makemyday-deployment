@@ -58,13 +58,13 @@ function ProjectView() {
   // console.log("users", users)
   const updateTask = function (id, start_date, end_date) {
     axios
-      .put(`http://localhost:8080/api/tasks/${id}`, {
+      .put(`/api/tasks/${id}`, {
         start: start_date,
         end: end_date,
       })
       .then((result) => {
         return axios.get(
-          `http://localhost:8080/api/tasks/${result.data[0].id}`
+          `/api/tasks/${result.data[0].id}`
         );
       })
       .then((response) => {
@@ -109,7 +109,7 @@ function ProjectView() {
     let newStatus = listSchema[destinationId - 1].name;
 
     axios
-      .put(`http://localhost:8080/api/tasks/${id}`, { status: newStatus })
+      .put(`/api/tasks/${id}`, { status: newStatus })
       .then((result) => {
         // console.log("result in drag and drop---", result);
         let project = cloneDeep(projects[result.data[0].project_id]);
@@ -122,11 +122,11 @@ function ProjectView() {
 
   const createTask = function (name, id) {
     axios
-      .post("http://localhost:8080/api/tasks", { name: name, project_id: id })
+      .post("/api/tasks", { name: name, project_id: id })
       .then((result) => {
         console.log("result  after post req", result);
         return axios.get(
-          `http://localhost:8080/api/tasks/${result.data[0].id}`
+          `/api/tasks/${result.data[0].id}`
         );
       })
       .then((responce) => {
@@ -142,7 +142,7 @@ function ProjectView() {
   };
 
   const deleteTasks = function (id) {
-    axios.delete(`http://localhost:8080/api/tasks/${id}`).then((result) => {
+    axios.delete(`/api/tasks/${id}`).then((result) => {
       let project = cloneDeep(projects[result.data[0].project_id]);
       let newTask = deleteTask(result.data[0].id, project.tasks);
       project.tasks = newTask;

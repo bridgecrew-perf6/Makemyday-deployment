@@ -76,7 +76,7 @@ export default function Form(props) {
         .put(`/api/projects/${projectId}/tasks/${taskId}`, editTask)
         .then((result) => {
           console.log("result in edit", result.data);
-          return axios.get(`http://localhost:8080/api/tasks/${result.data.id}`);
+          return axios.get(`/api/tasks/${result.data.id}`);
 
           // let user = findUser(result.data.user_id, projectUsers);
           // setSelectedUsers(user);
