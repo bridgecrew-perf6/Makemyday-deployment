@@ -1,5 +1,9 @@
 const { Pool } = require("pg");
 
+const proConfig = {
+  connectionString: process.env.DATABASE_URL
+};
+
 const pool = new Pool(process.env.NODE_ENV === "production" ? proConfig : {
   user: process.env.PGUSER,
   password: process.env.PGPASSWORD,
@@ -8,8 +12,6 @@ const pool = new Pool(process.env.NODE_ENV === "production" ? proConfig : {
   database: process.env.PGDATABASE
 });
 
-const proConfig = {
-  connectionString: process.env.DATABASE_URL
-}
+
 
 module.exports = pool;
