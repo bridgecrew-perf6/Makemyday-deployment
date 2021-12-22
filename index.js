@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const pool = require("./db/db");
-
+const path = require("path");
 //App Config
 const app = express();
 const port = process.env.PORT || 8080;
@@ -11,7 +11,9 @@ const port = process.env.PORT || 8080;
 //Middleware
 app.use(express.json());
 app.use(cors());
-
+if(process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "front-end/build")))
+}
 //DB Config
 
 //API Endpoints
@@ -305,6 +307,11 @@ app.delete("/api/tasks/:id", async (req, res) => {
     res.status(500).send(err);
   }
 });
+
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "front-end/build/index.html"))
+})
 
 //Listener
 app.listen(port, () => console.log(`listening on localhost:${port}`));

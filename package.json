@@ -2,11 +2,16 @@
   "name": "pern-boilerplate",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
+  "engines": {
+    "node": "12.22.1",
+    "npm": "6.14.12"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "nodemon": "nodemon server.js",
+    "start": "node index.js",
+    "heroku-postbuild": "cd front-end && npm install && npm run build",
+    "nodemon": "nodemon index.js",
     "db:reset": "node bin/resetdb.js"
   },
   "author": "",
