@@ -16,7 +16,7 @@ import ArrowUpwardIcon from "@material-ui/icons/ArrowUpward";
 import ArrowDownwardIcon from "@material-ui/icons/ArrowDownward";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import "./avatar.css";
-import avatar from "images/avatar.jpg";
+// import avatar from "images/avatar.jpg";
 import { withStyles } from "@material-ui/core/styles";
 const options = ["Edit", "Delete"];
 const LightTooltip = withStyles((theme) => ({
@@ -247,8 +247,8 @@ export default function Task({ index, updateTask, task }) {
                         <img
                           className="avatar1"
                           alt={task.user_name}
-                          // src={task.avatar}
-                          src={avatar}
+                          src={task.avatar}
+                          // src={avatar}
                         />
                       )}
                     </LightTooltip>

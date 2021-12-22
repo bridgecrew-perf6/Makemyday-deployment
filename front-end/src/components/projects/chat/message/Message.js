@@ -7,7 +7,7 @@ import { MessageContext } from "context/MessageContext";
 import {
   TextField,
   Typography,
-  Avatar,
+  // Avatar,
   Divider,
   Box,
   Container,
@@ -118,9 +118,9 @@ export default function Message({ project }) {
                     alt={message.user?.user_name}
                   /> */}
                   {/* <Typography>{user?.user_name}</Typography> */}
-                  <Avatar style={{ backgroundColor: "#673ab7" }}>
+                  {/* <Avatar style={{ backgroundColor: "#673ab7" }}>
                     {message.user?.user_name.charAt(0)}
-                  </Avatar>
+                  </Avatar> */}
                   <Typography
                     variant="h6"
                     style={{

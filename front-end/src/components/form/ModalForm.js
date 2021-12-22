@@ -24,7 +24,7 @@ import useStyles from "./Styles";
 import CloseIcon from "@material-ui/icons/Close";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
-import avatar from "images/avatar.jpg";
+// import avatar from "images/avatar.jpg";
 import KeyboardArrowRightIcon from "@material-ui/icons/KeyboardArrowRight";
 
 const findUser = (userId, projectUsers) => {
@@ -181,17 +181,17 @@ export default function Form(props) {
               getOptionLabel={(option) => option.user_name}
               renderOption={(user) => (
                 <div className={classes.members}>
-                  <img
+                  {/* <img
                     className="avatar"
                     alt={user.user_name}
-                    // src={user.avatar}
-                    src={avatar}
-                  />
-                  {/* <Avatar
+                    src={user.avatar}
+                    // src={avatar}
+                  /> */}
+                  <Avatar
                     className={classes.avatar}
                     alt={user.user_name}
                     src={user.avatar}
-                  /> */}
+                  />
                   <p>
                     {user.user_name}
                     <br />
