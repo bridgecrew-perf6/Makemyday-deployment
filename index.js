@@ -7,7 +7,7 @@ const path = require("path");
 //App Config
 const app = express();
 const port = process.env.PORT || 8080;
-
+app.use(express.static(path.join(__dirname, "front-end/build")))
 //Middleware
 app.use(express.json());
 app.use(cors());
