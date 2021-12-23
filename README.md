@@ -1,6 +1,6 @@
 # Make My Day
 
-### [Try the Live Demo!](https://makemydaydemo.vercel.app/projects)
+### [Try the Live Demo!](https://makemyday-app.herokuapp.com/projects)
 
 ## About
 
