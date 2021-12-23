@@ -99,7 +99,7 @@ export default function MiniDrawer({ children }) {
         <div className={classes.root}>
           <CssBaseline />
           <AppBar
-            elevation={2}
+            elevation={1}
             position="fixed"
             className={clsx(classes.appBar, {
               [classes.appBarShift]: open,
@@ -138,7 +138,7 @@ export default function MiniDrawer({ children }) {
                         Visit the Github Repo:
                       </Typography>
                       <br />
-                      <em>{"https://github.com/korlank/MakeMyDay"}</em>
+                      <em>{"https://github.com/korlank/Makemyday-deployment"}</em>
                     </React.Fragment>
                   }
                 >
@@ -147,7 +147,7 @@ export default function MiniDrawer({ children }) {
                     size="small"
                     className={classes.btnbtn}
                     onClick={() =>
-                      window.open("https://github.com/korlank/MakeMyDay")
+                      window.open("https://github.com/korlank/Makemyday-deployment")
                     }
                     startIcon={<GitHubIcon />}
                   >
@@ -161,7 +161,7 @@ export default function MiniDrawer({ children }) {
                 title={
                   <React.Fragment>
                     <Typography color="inherit">
-                      User Login Feature Not Enabled
+                      User Login Feature disabled for demo purposes
                     </Typography>
                   </React.Fragment>
                 }
