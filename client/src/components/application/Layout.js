@@ -138,7 +138,7 @@ export default function MiniDrawer({ children }) {
                         Visit the Github Repo:
                       </Typography>
                       <br />
-                      <em>{"https://github.com/byeongjae-kang/MakeMyDay"}</em>
+                      <em>{"https://github.com/korlank/MakeMyDay"}</em>
                     </React.Fragment>
                   }
                 >
@@ -147,7 +147,7 @@ export default function MiniDrawer({ children }) {
                     size="small"
                     className={classes.btnbtn}
                     onClick={() =>
-                      window.open("https://github.com/byeongjae-kang/MakeMyDay")
+                      window.open("https://github.com/korlank/MakeMyDay")
                     }
                     startIcon={<GitHubIcon />}
                   >
