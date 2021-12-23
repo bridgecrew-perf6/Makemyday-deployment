@@ -115,7 +115,7 @@ export default function MiniDrawer({ children }) {
                   </React.Fragment>
                 }
               >
-                {/* <IconButton
+                <IconButton
                   // color="inherit"
                   aria-label="open drawer"
                   // onClick={handleDrawerOpen}
@@ -125,13 +125,12 @@ export default function MiniDrawer({ children }) {
                   })}
                 >
                   <MenuIcon />
-                </IconButton> */}
+                </IconButton>
               </HtmlTooltip>
               <Typography variant="h6" noWrap className={classes.app}>
                 {/* <strong>MAKE MY DAY</strong> */}
               </Typography>
-              
-              {/* <div>
+              <div>
                 <HtmlTooltip
                   title={
                     <React.Fragment>
@@ -154,10 +153,9 @@ export default function MiniDrawer({ children }) {
                   >
                     Github
                   </Button>
-                </HtmlTooltip> */}
+                </HtmlTooltip>
                 {/* <Typography>WELCOME!! {user && user.user_name}</Typography> */}
-              {/* </div> */}
-
+              </div>
               <HtmlTooltip
                 style={{ cursor: "pointer" }}
                 title={
